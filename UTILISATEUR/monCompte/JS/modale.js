@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Ouvri modal modifye info
     if(editBtn && editModal) {
+        alert("Li peze");
         editBtn.addEventListener("click", () => {
             document.getElementById("editNom").value = currentUser.nom;
             document.getElementById("editPrenom").value = currentUser.prenom;
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             updateUserInfo();
             editModal.style.display = "none";
-            alert("Informations modifiées avec succès ✅");
+            alert("Informations modifiées avec succès.");
         });
     }
 
@@ -91,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const confirmPass = document.getElementById("confirmPassword").value.trim();
 
             if(newPass === "" || newPass !== confirmPass) {
-                alert("Les mots de passe ne correspondent pas ou sont vides ❌");
+                alert("Les mots de passe ne correspondent pas ou sont vides.");
                 return;
             }
 
@@ -105,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             passwordForm.reset();
             passwordModal.style.display = "none";
-            alert("Mot de passe modifié ✅");
+            alert("Mot de passe modifié.");
         });
     }
 
@@ -116,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 utilisateurs = utilisateurs.filter(u => u.email !== currentUser.email);
                 localStorage.setItem("utilisateurs", JSON.stringify(utilisateurs));
                 localStorage.removeItem("currentUser");
-                alert("Compte supprimé ❌");
+                alert("Compte supprimé");
                 window.location.href = "../inscription/inscription.html";
             }
         });
@@ -124,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Déconnexion
     if(logoutBtn) {
+        alert("Li peze");
         logoutBtn.addEventListener("click", () => {
             localStorage.removeItem("currentUser");
             window.location.href = "../connexion/connexion.html";
