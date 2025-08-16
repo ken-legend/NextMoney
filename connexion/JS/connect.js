@@ -1,8 +1,8 @@
 document.getElementById("connexionForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
     const messageDiv = document.getElementById("loginMessage");
 
     const utilisateurs = JSON.parse(localStorage.getItem("utilisateurs")) || [];
@@ -10,23 +10,22 @@ document.getElementById("connexionForm").addEventListener("submit", function(e) 
     const utilisateur = utilisateurs.find(user => user.email === email && user.password === password);
 
     if(utilisateur) {
+        // Sove itilizatè a nan yon sèl kle: currentUser
+        localStorage.setItem("currentUser", JSON.stringify(utilisateur));
 
-        localStorage.setItem("utilisateurConnecte", JSON.stringify(utilisateur));
-localStorage.setItem("utilisateurActif", JSON.stringify(utilisateur));
-        
-
+        messageDiv.textContent = "Connexion réussie ✅ Redirection...";
+        messageDiv.className = "message success";
+        messageDiv.style.display = "block";
 
         setTimeout(() => {
             window.location.href = "../UTILISATEUR/accueil.html"; 
-        }, 2000);
+        }, 1500);
 
     } else {
-        // Mesaj erè sou paj la
-        messageDiv.textContent = "Email ou mot de passe incorrect. Réesayer!!";
+        messageDiv.textContent = "Email ou mot de passe incorrect. Réessayer!!";
         messageDiv.className = "message error";
         messageDiv.style.display = "block";
 
-        // pou fè mesaj la disparèt apre 3 segond
         setTimeout(() => {
             messageDiv.style.display = "none";
         }, 3000);
