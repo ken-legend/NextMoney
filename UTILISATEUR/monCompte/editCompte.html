@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Modifier mon compte</title>
   <link rel="stylesheet" href="CSS/monCompte.css">
+  <link rel="stylesheet" href="../../CSS/style_responsive.css">
 </head>
 <body>
   <div class="account">
@@ -20,5 +21,14 @@
   </div>
 
   <script src="../monCompte/JS/edit.js"></script>
+
+  <script>
+    function modifierUser(index,newUsername,newPassword){
+      const user = JSON.parse(localStorage.getItem("users")) || [];
+      user[index] ={
+        username:newUsername, password:newPassword
+      }; localStorage.setItem("users",JSON.stringify(users));
+    }
+  </script>
 </body>
 </html>

@@ -10,12 +10,11 @@ document.getElementById("connexionForm").addEventListener("submit", function(e) 
     const utilisateur = utilisateurs.find(user => user.email === email && user.password === password);
 
     if(utilisateur) {
-        // Mesaj siksè sou paj la
-        messageDiv.textContent = "Connexion réussie. Bienvenue " + utilisateur.prenom + " !";
-        messageDiv.className = "message success";
-        messageDiv.style.display = "block";
 
         localStorage.setItem("utilisateurConnecte", JSON.stringify(utilisateur));
+localStorage.setItem("utilisateurActif", JSON.stringify(utilisateur));
+        
+
 
         setTimeout(() => {
             window.location.href = "../UTILISATEUR/accueil.html"; 
