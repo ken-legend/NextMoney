@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextMoney - Mon Compte</title>
+  <link rel="stylesheet" href="../monCompte/CSS/monCompte.css">
+  <link rel="stylesheet" href="../../CSS/style_responsive.css">
+</head>
+<body>
+<header class="header">
+      <!-- Bouton hamburger menu toggle -->
+  <button id="menu-toggle" class="menu-toggle" aria-label="Ouvrir/fermer le menu"></button>
+    <div class="logo"><img class="img-logo" src="../../IMAGES/logo_NM1.png">    NextMoney</div>
+
+  <nav id="navigation_bar" class="navigation_bar">
+    <a href="../accueil.html" class="bta">Tableau de bord</a>
+    <a href="#" class="bta">Marché</a>
+    <a href="#" class="bta">Trader</a>
+    <a href="#" class="bta">Historique</a>
+  </nav>
+
+  <button id="theme-toggle" class="theme-btn">🌙</button>
+
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="../accueil.html">Tableau de bord</a></li>
+            <li><a href="#">Marché</a></li>
+            <li><a href="#">Trader</a></li>
+            <li><a href="#">Dépot</a></li>
+            <li><a href="#">Rétrait</a></li>
+            <li><a href="#">Historique</a></li>
+            <li><a href="#">Transfert</a></li>
+            <li><a href="../index.html">Déconnexion</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="account">
+<section class="account-header">
+    <img src="../../IMAGES/icon_profil.jpg" alt="Photo de profil" class="avatar">
+    <h2 id="username"></h2> <!-- non itilizatè a pral chaje dinamikman -->
+    <p id="memberSince"></p> <!-- dat manm pral chaje -->
+</section>
+<section class="account-info">
+    <h3>Informations personnelles</h3>
+    <p><strong>Email :</strong> <span id="userEmail"></span></p>
+    <p><strong>Téléphone :</strong> <span id="userPhone"></span></p>
+  <a href="edit_account.html" class="btn">Modifier mes infos</a>
+</section>
+
+    <!-- Sécurité -->
+    <section class="account-security">
+        <h3>Sécurité</h3>
+        <button id="passwordBtn" class="btn">Changer mon mot de passe</button><br><br>
+        <button class="btn">Activer la double authentification</button>
+    </section>
+    <section class="delete-account">
+        <button class="btna"><h4>Supprimer le Compte</h4></button>
+    </section>
+       <section class="Deconnex">
+        <button class="btna1"><h4>Déconnexion</h4></button>
+    </section>
+</main>
+<!-- Modal pou modifye enfòmasyon -->
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Modifier mes informations</h3>
+    <form id="editForm">
+      <label>Nom:</label>
+      <input type="text" id="editNom" required>
+      <label>Prénom:</label>
+      <input type="text" id="editPrenom" required>
+      <button type="submit">Enregistrer</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal pou chanje modpas -->
+<div id="passwordModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Changer mon mot de passe</h3>
+    <form id="passwordForm">
+      <label>Nouveau mot de passe:</label>
+      <input type="password" id="newPassword" required>
+      <label>Confirmer mot de passe:</label>
+      <input type="password" id="confirmPassword" required>
+      <button type="submit">Enregistrer</button>
+    </form>
+  </div>
+</div>
+
+<script src="../JS/const.js"></script>
+<script src="../../JS/theme.js"></script>
+<script src="../../inscription/JS/inscrip.js"></script>
+
+</body>
+</html>

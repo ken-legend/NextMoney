@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>page-inscription</title>
+    <link rel="stylesheet" href="./CSS/style_incrip.css">
+    <link rel="stylesheet" href="../CSS/style_responsive.css">
+</head>
+<body class="light-theme">
+<header class="header">
+  <button id="menu-toggle" class="menu-toggle" aria-label="Ouvrir/fermer le menu"></button>
+    <div class="logo"><img class="img-logo" src="../IMAGES/logo_NM1.png">    NextMoney</div>
+    
+    <nav class="navigation_bar">
+        
+        <a href="../index.html" class="bta">Accueil</a>
+        <a href="../connexion/connexion.html" class="bta">Connecter</a>
+        </nav>
+         <button id="theme-toggle" class="theme-btn">🌙</button>
+         
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="#">Marché</a></li>
+            <li><a href="./connexion.html">Trader</a></li>
+            <li><a href="./connexion/connexion.html">Connecter</a></li>
+            <li><a href="./inscription/inscription.html">Inscription</a></li>
+        </ul>
+    </nav>
+        
+</header>
+
+        <div class="inscrip-container">
+            <form class="inscrip-form" id="inscripForm">
+                <h2>Bienvenue a bord!</h2>
+                <p>Creer votre compte</p>
+                    <label for="nom">Nom</label>
+                <input type="text" id="nom" placeholder="Entrer votre Nom" required>
+                    <label for="prenom">Prenom</label>
+                <input type="text" id="prenom" placeholder="Entrer votre Prenom" required>
+                    <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Entrer votre email" required>
+                    <label for="password" >Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="Entrer un mot de passe" pattern=".{6,}" title="Le mot de passe doit contenir au moins 6 caracteres" required>
+                    <label for="confirmPassword">Confirmer le mot de passe</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmer votre mot de passe" pattern=".{6,}" title="Le mot de passe doit contenir au moins 6 caracteres" required>
+                    <label class="term-checkbox">
+                        <input type="checkbox" id="terms" required><span class="checkmark"></span>  En creant un compte, j'accepte les <a href="#" target="_blank">Conditions d'utilisation</a> et la <a href="#" target="_blank">Politique de confidentialite</a> de <strong>NextMoney</strong>.
+                        
+                    </label>
+               
+            <button type="submit">S'inscrire</button>
+            </form>
+                        <div id="message" class="message"></div>
+
+        </div>
+                   <center> <h5>Deja un compte?<a href="../connexion/connexion.html" class="ins"> Connecter</a></h5></center>    
+      
+<script src="../JS/menuToggle.js"></script>
+        <script src="../JS/theme.js"></script>
+        <script src="../UTILISATEUR/JS/const.js"></script>
+        <script src="./JS/inscrip.js"></script>
+        
+
+</body>
+</html>

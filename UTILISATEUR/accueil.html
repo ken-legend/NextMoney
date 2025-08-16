@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextMoney - Tableau de bord</title>
+    <link rel="stylesheet" href="./CSS/accueil_style.css">
+    <link rel="stylesheet" href="../CSS/style_responsive.css">
+   <!--- <link rel="stylesheet" href="../CSS/style_responsive.css">-->
+
+</head>
+<body class="light-theme">
+<header class="header">
+
+  <button id="menu-toggle" class="menu-toggle" aria-label="Ouvrir/fermer le menu"></button>
+    <div class="logo"><img class="img-logo" src="../IMAGES/logo_NM1.png">    NextMoney</div>
+
+  <nav id="navigation_bar" class="navigation_bar">
+    <a href="#" class="bta">Accueil</a>
+    <a href="#" class="bta">Marché</a>
+    <a href="./connexion/connexion.html" class="bta">Trader</a>
+    <a href="../UTILISATEUR/monCompte/monCompte.html" class="bta">Mon Compte</a>
+  </nav>
+
+  <button id="theme-toggle" class="theme-btn">🌙</button>
+
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="./monCompte/monCompte.html"><h3>Mon Compte</h3></a></li>
+            <li><a href="#">Marché</a></li>
+            <li><a href="#">Trader</a></li>
+            <li><a href="#">Dépot</a></li>
+            <li><a href="#">Rétrait</a></li>
+            <li><a href="#">Historique</a></li>
+            <li><a href="#">Transfert</a></li>
+            <li><a href="../index.html">Déconnexion</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="dashboard">
+    <!-- Profil -->
+    <section class="profile">
+        <img src="../IMAGES/icon_profil.jpg" alt="Photo de profil" class="avatar">
+        <div>
+            <h2>Bonjour, <span id="username">Ken</span></h2>
+            <p>Bienvenue sur votre espace NextMoney</p>
+        </div>
+    </section>
+
+    <!-- Solde -->
+    <section class="balance">
+        <h3>Solde disponible</h3>
+        <p class="amount">USD 512.78</p>
+    </section>
+
+    <a href="../UTILISATEUR/retrait/retrait.html"></a>
+    <section class="quick-actions">
+        <div class="action-card" onclick="window.location.href='../UTILISATEUR/depot/depot.html'">📥 Dépôt</div>
+        <div class="action-card" onclick="window.location.href='../UTILISATEUR/retrait/retrait.html'">📤 Retrait</div>
+        <div class="action-card">💸 Transfert</div>
+        <div class="action-card">📜 Historique</div>
+    </section>
+
+    <section class="transactions">
+        <h3>Dernières transactions</h3>
+        <ul>
+            <li>+ USD 500 — Dépôt — 12/08/2025</li>
+            <li>- USD 100 — Retrait — 11/08/2025</li>
+            <li>- USD 50 — Transfert — 10/08/2025</li>
+        </ul>
+    </section>
+</main>
+
+<script src="./JS/const.js"></script>
+<script src="../JS/theme.js"></script>
+</body>
+</html>

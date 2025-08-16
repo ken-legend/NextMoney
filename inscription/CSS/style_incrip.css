@@ -1,0 +1,251 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #9b5cff;
+  --secondary-color: #7a3fd8;
+  
+}
+
+body.dark-theme {
+  --bg-color: #0d0d2b;
+  --text-color: #ffffff;
+  --primary-color: #9b5cff;
+  --secondary-color: #7a3fd8;
+}
+body {
+        padding-top: 80px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.6s, color 0.10s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  background: rgba(146, 25, 25, 0.05);
+  top: 0;
+    width: 99%;
+    z-index: 1000;
+    position: fixed;
+
+}
+body.dark-theme .header {
+  background: rgba(255,255,255,0.05);
+}
+.navigation_bar a {
+  color: var(--text-color);
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navigation_bar a:hover {
+  color: var(--primary-color);
+}
+
+.logo{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0fc;
+}
+.img-logo{
+    width: 50px;
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+    font-weight: bold;
+    border-radius: 5px;
+
+    
+}
+.navigation_bar a {
+  color: var(--text-color);
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover{
+    color: #0d1d1a;
+
+  
+   
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+/*.bta{
+    padding: 5px 10px;
+    margin: 15px;
+    background-color: #00ffcc;
+    color: #0e0e0e;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: all 0.1s ease;
+}*/
+.bta:hover{
+    transform:scale(1.1);
+    text-decoration: none;
+}
+.inscrip-container{
+    margin: 5px auto 0 auto;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #27265757, #ddddff);
+    background-color: #8f8181;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 500px #41408057;(255, 0, 0);
+    width: 370px;
+    text-align: center;
+    color: #000;
+}
+.inscrip-form input{
+    width: 95%;
+    padding: 12px;
+    margin: px 0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+    border: none /*1px solid #1900ff*/;
+  
+}
+.inscrip-form button{
+    width: 100%;
+    padding: 12px;
+    background-color: #cecb09;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.inscrip-form button:hover{
+    background-color: #97950b;
+}
+a{
+    color: #005999;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.term-checkbox{
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    font-size: 14px;
+    color: #191930;
+}
+.term-checkbox input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark{
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.term-checkbox input:checked~.checkmark{
+    background-color: #4caf50;
+}
+.checkmark::after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+.term-checkbox input:checked~ .checkmark::after{
+    display: block;
+}
+.term-checkbox .checkmark::after{
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 9px;
+    border:solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+body.dark-theme footer {
+  background: rgba(255,255,255,0.05);
+}
+
+
+.message {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: none; /* kache li okòmansman */
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+
+/*ti menu side lan*/
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #cfcfcf;
+    padding-top: 0px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #000000;
+
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #2476e0;
+    border-radius: 4px;
+}

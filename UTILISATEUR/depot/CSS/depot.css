@@ -1,0 +1,85 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    background-color: #f0f4f8;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container pou tout metòd yo */
+.methods-container {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Chak metòd (kat) */
+.method-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #007BFF, #00C6FF);
+    color: #fff;
+    border-radius: 12px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.method-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Label ak imaj */
+.method-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Imaj yo */
+.method-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 5px;
+}
+
+/* Flèch la */
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* flèch blan sou background ble */
+}
+
+/* Responsive pou mobil */
+@media screen and (max-width: 480px) {
+    .method-item {
+        padding: 12px 15px;
+    }
+    .method-label {
+        font-size: 14px;
+        gap: 8px;
+    }
+    .method-img {
+        width: 30px;
+        height: 30px;
+    }
+    .arrow-icon {
+        width: 16px;
+        height: 16px;
+    }
+}

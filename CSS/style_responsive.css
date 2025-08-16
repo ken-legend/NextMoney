@@ -1,0 +1,63 @@
+.menu-toggle {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007BFF;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  position: static;
+}
+
+.menu-toggle::before {
+  content: "☰"; /* hamburger */
+}
+
+.menu-toggle.open::before {
+  content: "✕"; /* croix */
+}
+
+
+
+
+
+
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007BFF;
+  padding: 10px;
+}
+
+/* Navigation par défaut : en ligne pour PC */
+.navigation_bar {
+  display: flex;
+  gap: 20px;
+} 
+
+
+/* Responsive : sur petits écrans (mobile/tablette) */
+@media (max-width: 768px) {
+.header{
+  padding: 1%;
+  margin-top: 1%;
+
+}
+.navigation_bar{
+  display: none;
+}
+  /* Afficher bouton toggle */
+  .menu-toggle {
+    display: block;
+  }
+  .inscrip-container{
+    height: auto;
+    width: 300px;
+  }
+
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>page-connexion</title>
+    <link rel="stylesheet" href="./CSS/style_conex.css">
+    <link rel="stylesheet" href="../CSS/style_responsive.css">
+</head>
+<body>
+        <header class="header">
+              <button id="menu-toggle" class="menu-toggle" aria-label="Ouvrir/fermer le menu"></button>
+        
+            <div class="logo"><img class="img-logo" src="../IMAGES/logo_NM1.png">    NextMoney</div>
+            <nav class="navigation_bar">
+                <a href="../Accueil.html" class="bta">Accueil</a>
+                <a href="../inscription/inscription.html" class="bta">Inscription</a>
+                </nav>
+                  <button id="theme-toggle" class="theme-btn">🌙</button>
+        </header>
+        <div class="login-cont">
+            <form class="conex-form"  id="connexionForm">
+                <h2>Heureux de vous revoir!</h2>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Entrer votre email">
+                    <label>Mot de passe</label>
+                    <input type="password" id="password" placeholder="Entrer votre mot de passe">
+                    <a href="#">Mot de passe oublie?</a>
+                    <button type="submit">Connecter</button>
+            </form>
+            <div id="loginMessage" class="message"></div>
+        </div>
+        <center><h5>Pas de compte?<a href="../inscription/inscription.html" class="ins">Inscription</a></h5>
+
+            <a href="../UTILISATEUR/accueil.html"></a>
+  
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="#">Marché</a></li>
+            <li><a href="./connexion.html">Trader</a></li>
+            <li><a href="./connexion/connexion.html">Connecter</a></li>
+            <li><a href="../inscription/inscription.html">Inscription</a></li>
+        </ul>
+    </nav>
+    <script src="../JS/theme.js"></script>
+    <script src="../UTILISATEUR/JS/const.js"></script>
+    <script src="./JS/connect.js"></script>
+</body>
+</html>
